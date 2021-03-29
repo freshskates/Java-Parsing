@@ -31,7 +31,7 @@ public class Dictionary {
     }
 
     void MapWords(String line) {
-        String[] Initial = line.split("\\|", 2);
+        final String[] Initial = line.split("\\|", 2);
         String[] definitions = Initial[1].split("\\|"), temp = new String[2];
         Word word = new Word(definitions.length);
         for (int i = 0; i < definitions.length; i++) {
@@ -39,7 +39,6 @@ public class Dictionary {
             if (temp.length != 2)
                 return;
             word.list.add(new Definition(temp[0], temp[1]));
-            // temp = new String[2];
         }
         mapped_words.put(Initial[0], word);
     }
