@@ -39,7 +39,7 @@ public class Dictionary {
             if (temp.length != 2)
                 return;
             word.list.add(new Definition(temp[0], temp[1]));
-            temp = new String[2];
+            // temp = new String[2];
         }
         mapped_words.put(Initial[0], word);
     }
